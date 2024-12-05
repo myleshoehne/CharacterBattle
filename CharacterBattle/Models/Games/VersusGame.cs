@@ -36,8 +36,13 @@ namespace CharacterBattle.Models.Games
 
             _battle.Start();
 
-            Console.WriteLine($"Game over! {_battle.Winner} Wins!!");
+            
 
+            Console.WriteLine($"Game over! {_battle.Winner?.Name} Wins!!");
+
+            OutputHelper.DisplayVersusBattleLog(_battle.BattleLog);
+
+            Console.ReadKey();
         }
     }
 }
